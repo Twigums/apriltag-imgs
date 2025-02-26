@@ -61,19 +61,14 @@ def main():
     end_id = args.end_id
 
     for i in range(start_id, end_id):
-        str_id = str(i)
-
-        while len(str_id) < 5:
-            str_id = "0" + str_id
+        str_id = f"{int(i):05d}"
 
         number_types = re.findall(r"\d+", tag_file)
         file_name = "tag"
 
         for i in range(len(number_types)):
-            while len(number_types[i]) < 2:
-                number_types[i] = "0" + number_types[i]
 
-            file_name += number_types[i] + "_"
+            file_name += f"{int(number_types[i]):02d}" + "_"
 
         file_name += str_id + ".png"
         full_path = os.path.join(tag_file, file_name)
