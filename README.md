@@ -13,3 +13,9 @@ Alternately, you can use the supplied native Python 3 script `tag_to_svg.py` to 
 ~~~
 python3 tag_to_svg.py tagStandard52h13/tag52_13_00007.png tag52_13_00007.svg --size=20mm
 ~~~
+
+## twi edit
+You can use `range_tag_to_svg.py` to create multiple SVGs by supplying the folder you want to use and the start to end ids of the april tags you want to copy. For example:
+~~~
+python3 range_tag_to_svg.py tag36h11/ --size=20mm --start=0 --end=10
+~~~
